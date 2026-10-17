@@ -37,3 +37,4 @@ def test_unknown_fuel(client):
     assert response.get_json() == {
         "error": "unknown fuel"
     }
+
