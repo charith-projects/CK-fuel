@@ -1,0 +1,17 @@
+name: Fuel Monitor CI
+on : [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: checkout-code
+        uses: actions/checkout@v4
+
+      - name: setup-python
+        uses: actions/setup-python@v5
+
+      - name: syntax-check
+        run: python -m py_compile app.py
+
+   
